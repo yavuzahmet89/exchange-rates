@@ -1,0 +1,22 @@
+{
+    "name": "yavuz/exchange-rates",
+    "description": "Exchange rates API library",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yavuz\\ExchangeRates\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yavuz Ahmet İpek",
+            "email": "yavuzahmet89@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
