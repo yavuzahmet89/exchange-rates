@@ -1,6 +1,7 @@
 <?php
 
 use Yavuz\ExchangeRates\ExchangeRate\ExchangeRate;
+use Yavuz\ExchangeRates\ExchangeRate\Services\CurrencyAPI;
 use Yavuz\ExchangeRates\ExchangeRate\Services\Tcmb;
 
 require_once 'vendor/autoload.php';
@@ -15,6 +16,14 @@ try {
         ->getResult();
 
     dump($exchangeRatesTCMB);
+
+    $exchangeRatesCurrencyAPI = (new ExchangeRate(new CurrencyAPI()))
+        ->setAPIKey('api-key')
+        ->setBaseCurrency('TRY')
+        ->setCurrencies('GBP')
+        ->getResult();
+
+    dump($exchangeRatesCurrencyAPI);
 } catch (Exception $e) {
     echo $e->getMessage();
 }
